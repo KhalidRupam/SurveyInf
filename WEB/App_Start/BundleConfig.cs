@@ -24,7 +24,8 @@ namespace WEB
                 "~/Scripts/angular-route.min.js",
                 "~/Scripts/angular-cookies.js",
                 "~/Scripts/angular-animate.js",
-                "~/Scripts/linq.js"
+                "~/Scripts/linq.js",
+                "~/Scripts/angular-trix.js"
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/spa").Include(

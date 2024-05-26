@@ -50,6 +50,43 @@
             alertify.log('Unknown server error', 'error', '10000');
         });
     };
+    $scope.trix = '<div>Lorem ipsum dolor sit amet,<strong>consectetur</strong>adipiscing elit<del>Praesent lacus diam</del>, fermentum et venenatis quis, suscipit sed nisi. In pharetra sem eget orci posuere pretium.<em>Integer</em>non eros<strong><em>scelerisque</em></strong>, consequat lacus id, rutrum felis. Nulla elementum felis urna, at placerat arcu ultricies in.</div><ul><li>Proin elementum sollicitudin sodales.</li><li>Nam id erat nec nibh dictum cursus.</li></ul><blockquote>In et urna eros. Fusce molestie, orci vel laoreet tempus, sem justo blandit magna, at volutpat velit lacus id turpis.<br>Quisque malesuada sem at interdum congue. Aenean dapibus fermentum orci eu euismod.</blockquote><div></div>';
+
+
+    var events = ['trixInitialize', 'trixChange', 'trixSelectionChange', 'trixFocus', 'trixBlur', 'trixFileAccept', 'trixAttachmentAdd', 'trixAttachmentRemove'];
+
+    for (var i = 0; i < events.length; i++) {
+        $scope[events[i]] = function (e) {
+            console.info('Event type:', e.type);
+        }
+    };
+
+    var createStorageKey, host, uploadAttachment;
+
+    $scope.trixChange = function (e, editor) {
+        var document = editor.getDocument()
+        document.toString()
+        console.log($scope.trix)
+        console.log(document.toString())
+    }
+    $scope.trixSelectionChange = function (e, editor) {
+        var document = editor.getDocument()
+        document.toString()
+        console.log(document.toString())
+    }
+
+    $scope.trixFocus = function (e, editor) {
+        var document = editor.getDocument()
+        var d= document.toString()
+    }
+
+    $scope.trixSelectionChange = function (e) {
+        var attachment;
+        attachment = e.attachment;
+        if (attachment.file) {
+            return uploadAttachment(attachment);
+        }
+    }
 
     function submitRequest(trnType) {
         var params = JSON.stringify({ obj: $scope.entity, transactionType: trnType });
@@ -97,6 +134,10 @@
         $scope.entityListPaged = $scope.entityList.slice(begin, end);
     }
 
+
+    $scope.check = function () {
+        $scope.htmlVariable
+    }
     $scope.post = function (trnType) {
         var where = "Name = '" + $scope.entity.Name + "'";
         if ($scope.entity.Id > 0)

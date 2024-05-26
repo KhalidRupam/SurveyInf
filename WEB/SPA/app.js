@@ -1,4 +1,4 @@
-﻿var app = angular.module('csmApp', ['ngRoute', 'ngCookies', 'ngAnimate', 'ngMaterial', 'jkAngularRatingStars', 'blockUI', 'angularUtils.directives.dirPagination']);
+﻿var app = angular.module('csmApp', ['ngRoute', 'ngCookies', 'ngAnimate', 'ngMaterial', 'jkAngularRatingStars', 'blockUI', 'angularUtils.directives.dirPagination', 'angularTrix']);
 
 app.config(function ($routeProvider, blockUIConfig) {
     $routeProvider

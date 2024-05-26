@@ -76,22 +76,22 @@
             alertify.log('Please Select ToDate !', 'error', '10000');
             valid = false;
         }
-        if ($scope.cmbDistributor.Id == 0 || $scope.cmbDistributor.Id == null || $scope.cmbDistributor.Id == undefined) {
-            $scope.distributorId = null;
+        //if ($scope.cmbDistributor.Id == 0 || $scope.cmbDistributor.Id == null || $scope.cmbDistributor.Id == undefined) {
+        //    $scope.distributorId = null;
             
-        }
-        else {
-            $scope.distributorId = $scope.cmbDistributor.Id;
-        }
-        if ($scope.cmbDistributor.Name == 0 || $scope.cmbDistributor.Name == null || $scope.cmbDistributor.Name == undefined) {
-            $scope.DistrbutorName = null;
-        }
-        else {
-            $scope.DistrbutorName = $scope.cmbDistributor.Name;
-        }
-        if ($scope.SurveyorName == 0 || $scope.SurveyorName == null || $scope.SurveyorName == undefined) {
-            $scope.SurveyorName = null;
-        }
+        //}
+        //else {
+        //    $scope.distributorId = $scope.cmbDistributor.Id;
+        //}
+        //if ($scope.cmbDistributor.Name == 0 || $scope.cmbDistributor.Name == null || $scope.cmbDistributor.Name == undefined) {
+        //    $scope.DistrbutorName = null;
+        //}
+        //else {
+        //    $scope.DistrbutorName = $scope.cmbDistributor.Name;
+        //}
+        //if ($scope.SurveyorName == 0 || $scope.SurveyorName == null || $scope.SurveyorName == undefined) {
+        //    $scope.SurveyorName = null;
+        //}
         if(valid) {
             $http({
                 url: "/QuestionnairePhysicalStocksReport/Get",
@@ -196,16 +196,16 @@
             alertify.log('Please Select ToDate !', 'error', '10000');
             valid = false;
         }
-        if ($scope.cmbDistributor.Id == 0 || $scope.cmbDistributor.Id == null || $scope.cmbDistributor.Id == undefined) {
-            $scope.distributorId = $scope.cmbDistributor.Id;
+        //if ($scope.cmbDistributor.Id == 0 || $scope.cmbDistributor.Id == null || $scope.cmbDistributor.Id == undefined) {
+        //    $scope.distributorId = $scope.cmbDistributor.Id;
 
-        }
-        if ($scope.cmbDistributor.Name == 0 || $scope.cmbDistributor.Name == null || $scope.cmbDistributor.Name == undefined) {
-            $scope.DistrbutorName = $scope.cmbDistributor.Name;
-        }
-        if ($scope.SurveyorName == 0 || $scope.SurveyorName == null || $scope.SurveyorName == undefined) {
-            $scope.SurveyorName = null;
-        }
+        //}
+        //if ($scope.cmbDistributor.Name == 0 || $scope.cmbDistributor.Name == null || $scope.cmbDistributor.Name == undefined) {
+        //    $scope.DistrbutorName = $scope.cmbDistributor.Name;
+        //}
+        //if ($scope.SurveyorName == 0 || $scope.SurveyorName == null || $scope.SurveyorName == undefined) {
+        //    $scope.SurveyorName = null;
+        //}
         if (valid) {
             //var params = JSON.stringify({ userId: 1 });
 
